@@ -1,0 +1,15 @@
+.just {
+  margin: auto;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.just h1 {
+  font-size: 60px;
+  padding: 30px;
+}
+
+.just h3 {
+  font-size: 30px;
+  padding: 30px;
+}

@@ -1,0 +1,40 @@
+<div class="card">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <h1 class="card-header">Sing Up</h1>
+  <div class="card-body">
+    <form (submit)="onSignUp(signUp)" #signUp="ngForm" *ngIf="!isLoading">
+      <div class="form-group">
+        <label>Email address</label>
+        <input
+          class="form-control"
+          name="email"
+          ngModel
+          type="email"
+          #emailInput="ngModel"
+          required
+          email
+        />
+
+        <mat-error *ngIf="emailInput.invalid">Must be a valid email</mat-error>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          class="form-control"
+          name="password"
+          ngModel
+          type="password"
+          type="password"
+          #passwordInput="ngModel"
+          required
+        />
+        <mat-error *ngIf="passwordInput.invalid">Valid Password</mat-error>
+      </div>
+
+      <button type="submit" class="btn btn-primary" *ngIf="!isLoading">
+        Sing Up
+      </button>
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+    </form>
+  </div>
+</div>

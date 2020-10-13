@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="left">
+    <img [src]="post.filePath" [alt]="post.firstName" width="200" />
+    <h4>{{ post.fullName }}</h4>
+    <p>{{ post.profession }}</p>
+    <a href="#">Download CV</a>
+  </div>
+  <div class="right">
+    <div class="info">
+      <h3>Information</h3>
+      <div class="info_data">
+        <div class="data">
+          <h4>Email</h4>
+          <p>{{ post.email }}</p>
+        </div>
+        <div class="data">
+          <h4>Phone</h4>
+          <p>{{ post.phone }}</p>
+        </div>
+      </div>
+
+      <div class="projects">
+        <h3>Address</h3>
+        <div class="projects_data">
+          <div class="data">
+            <h4>Country</h4>
+            <p>{{ post.country }}</p>
+          </div>
+          <div class="data">
+            <h4>Town</h4>
+            <p>{{ post.town }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

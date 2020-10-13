@@ -1,0 +1,39 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light"
+  style="background-color: #d5d8dc"
+>
+  <a class="navbar-brand">Job Application</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item" *ngIf="userIsAuthed">
+        <a class="nav-link" routerLink="/apply">Apply</a>
+      </li>
+      <li class="nav-item" *ngIf="userIsAuthed">
+        <a class="nav-link" routerLink="/applicants">Applicants</a>
+      </li>
+      <li class="nav-item" *ngIf="!userIsAuthed">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="!userIsAuthed">
+        <a class="nav-link" routerLink="/signup">Sign up</a>
+      </li>
+      <li *ngIf="userIsAuthed">
+        <button mat-button (click)="onLogout()">Logout</button>
+      </li>
+    </ul>
+  </div>
+</nav>
